@@ -1,0 +1,21 @@
+<table 
+    [style.marginLeft]="'40%'"
+    [style.border]="'2px solid black'"
+>
+    <thead>
+    <tr>
+        <th [style.margin]="'2px'" [style.border]="'2px solid black'">Name</th>
+        <th [style.margin]="'2px'" [style.border]="'2px solid black'">Email</th>
+        <th [style.margin]="'2px'" [style.border]="'2px solid black'">Band</th>
+        <th [style.border]="'2px solid black'"><button title="Add another singer" (click)="addSinger()">+</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let singer of singers">
+        <td [style.margin]="'2px'" [style.border]="'2px solid black'">{{singer.name}}</td>
+        <td [style.margin]="'2px'" [style.border]="'2px solid black'">{{singer.email}}</td>
+        <td [style.margin]="'2px'" [style.border]="'2px solid black'">{{singer.band}}</td>
+        <td [style.border]="'2px solid black'"><button title='Remove this singer' (click)="removeSinger($event, singer)" >-</button></td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,111 @@
+@import "~@progress/kendo-theme-default/scss/all";
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+$navigation-background: #222d5a;
+$navigation-color: white;
+$navigation-hover-color: #4275ff;
+
+.navigation {
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $navigation-background;
+}
+
+.navigation a {
+  flex: 1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.navigation a, .navigation a:visited, .navigation a:focus, .md-menu-content a {
+  color: $navigation-color;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: small;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.navigation a:hover, .md-menu-content a:hover {
+  color: $navigation-hover-color;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.md-menu-content {
+  background-color: $navigation-background;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.router-outlet-container {
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+  padding: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+.list-box {
+  overflow-y: scroll;
+  list-style-type: none;
+}
+
+.list-box-item {
+  cursor: pointer;
+  padding: 2px;
+  color: $text-color;
+  background-color: $bg-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.list-box-item:hover {
+  color: $hover-text;
+  background-color: $hover-bg;
+  border-color: $hover-border;
+}
+
+.selected {
+  background-color: $selected-bg;
+  color: $selected-text;
+  border-color: $selected-border;
+}
+
+.header {
+  font-weight: bold;
+  font-size: $font-size-lg;
+}
+
+.stamps-panel {
+  border: solid 2px $border-color;
+  border-radius: $border-radius;
+}
+
+.form-item {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+// temporary fix for kendo dialog being cut off in IE
+.k-dialog .k-window-content {
+  -ms-flex: none;
+  flex: none;
+}
+
+.selectable-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: $navigation-hover-color;
+}

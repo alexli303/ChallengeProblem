@@ -1,0 +1,4 @@
+
+> training-tracking-tool@0.0.0 lint C:\GIT\stamps\widgets\PDAT\TestingNG2Gantt\ganttTestsII
+> tslint "src/**/*.ts" --project src/tsconfig.json --type-check --exclude "src/app/ng2-gantt/**"  && tslint "e2e/**/*.ts" --project e2e/tsconfig.json --type-check
+
